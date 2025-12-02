@@ -1,0 +1,418 @@
+/* =====================================================
+   1. RESET + VARIÁVEIS GERAIS
+   ===================================================== */
+:root {
+    --cor-fundo-header: #3E2723;
+    --cor-fundo-body: #281912;
+    --cor-fundo-secao: #4E342E;
+
+    --cor-texto-principal: #FFFFFF;
+    --cor-destaque: #E69138;
+    --cor-borda: #8D6E63;
+
+    --fonte-titulo: 'IM Fell English SC', serif;
+    --fonte-destaque: 'Bebas Neue', sans-serif;
+    --fonte-texto: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-fundo-body);
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-texto);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, li {
+    list-style: none;
+}
+
+
+/* =====================================================
+   2. HEADER
+   ===================================================== */
+header {
+    background-color: var(--cor-fundo-header);
+    padding: 15px 40px;
+    border-bottom: 2px solid var(--cor-destaque);
+}
+
+.header-org {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.menu nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+    transition: transform 0.3s;
+}
+
+.nav-icon:hover {
+    transform: scale(1.1);
+}
+
+
+/* =====================================================
+   3. HERO SECTION
+   ===================================================== */
+.hero {
+    
+    width: 100%;
+    height: 100vh;
+    background-image: url('/src/assets/images/imagem\ de\ fundo.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-fundo {
+    position:absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+}
+
+.imagem-fundo img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.7);
+    align-items: center;
+}
+
+.fundo-titulo h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.fundo-titulo button {
+    background-color: var(--cor-destaque);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-family: var(--fonte-destaque);
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fundo-titulo button:hover {
+    background-color: #d67d26;
+}
+
+
+/* =====================================================
+   4. COLEÇÃO WESTERN
+   ===================================================== */
+.colecao-western {
+    background-color: var(--cor-fundo-header);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 4px solid #8B4513;
+    border-bottom: 4px solid #8B4513;
+}
+
+.colecao-western h2 {
+    font-family: var(--fonte-titulo);
+    color: #D7CCC8;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.fotos-produtos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.fotos-produtos img {
+    width: 200px;
+    border: 3px solid var(--cor-borda);
+    border-radius: 10px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.fotos-produtos img:hover {
+    transform: translateY(-5px);
+    border-color: var(--cor-destaque);
+}
+
+
+/* =====================================================
+   5. CATEGORIAS
+   ===================================================== */
+.categoria {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.titulo-categoria {
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo-categoria h3 {
+    font-family: var(--fonte-destaque);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.separador-horizontal {
+    height: 2px;
+    background-color: var(--cor-destaque);
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.produtos-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.produtos-categorias img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.produtos-categorias span {
+    display: block;
+    margin-top: 10px;
+    font-family: var(--fonte-titulo);
+    color: var(--cor-destaque);
+    font-size: 1.2rem;
+}
+
+
+/* =====================================================
+   6. SOBRE NÓS
+   ===================================================== */
+.sobre-nos {
+    background-color: #3E2723;
+    padding: 50px 20px;
+    color: #D7CCC8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-sobre-nos {
+    max-width: 1000px;
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo-sobre-nos h4 {
+    font-family: var(--fonte-destaque);
+    font-size: 2.5rem;
+}
+
+.historia-texto {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.historia-texto h5 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-destaque);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.historia-texto p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.imagem-artesao img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--cor-destaque);
+}
+
+/* DESKTOP LADO A LADO */
+@media (min-width: 768px) {
+    .sobre-nos {
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+    
+    .historia-texto {
+        text-align: left;
+        width: 50%;
+    }
+
+    .imagem-artesao {
+        width: 50%;
+        text-align: center;
+    }
+}
+
+
+/* =====================================================
+   7. FOOTER
+   ===================================================== */
+footer {
+    background-color: #000;
+    color: #FFF;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.divisor-horse {
+    width: 100%;
+    margin-top: -50px;
+    z-index: 10;
+    position: relative;
+}
+
+.divisor-horse img {
+    width: 100%;
+    display: block;
+}
+
+.final {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo-inferior img {
+    width: 150px;
+}
+
+.direitos-reservados p {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.contato {
+    display: flex;
+    gap: 40px;
+}
+
+.contato h6 {
+    font-family: var(--fonte-destaque);
+    color: var(--cor-destaque);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.redes-sociais nav {
+    display: flex;
+    gap: 10px;
+}
+
+.right {
+    display: flex;
+    gap: 20px;
+}
+
+.separador-vertical {
+    width: 1px;
+    background-color: #555;
+}
+
+.contato-social p {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    line-height: 1.8;
+}
+
+.contato-social p:hover {
+    color: var(--cor-destaque);
+}
+
+
+/* =====================================================
+   8. RESPONSIVIDADE
+   ===================================================== */
+@media (max-width: 768px) {
+    .final {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .produtos-categorias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .produtos-categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .fundo-titulo h1 {
+        font-size: 2rem;
+    }
+}
