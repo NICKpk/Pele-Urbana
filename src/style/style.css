@@ -1,6 +1,4 @@
-/* =====================================================
-   1. RESET + VARIÁVEIS GERAIS
-   ===================================================== */
+/*    RESET E VARIÁVEIS GERAIS */
 :root {
     --cor-fundo-header: #3E2723;
     --cor-fundo-body: #281912;
@@ -19,10 +17,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 body {
@@ -42,44 +41,75 @@ ul, li {
 }
 
 
-/* =====================================================
-   2. HEADER
-   ===================================================== */
+/*  HEADER */
 header {
     background-color: var(--cor-fundo-header);
-    padding: 15px 40px;
-    border-bottom: 2px solid var(--cor-destaque);
+    padding: 30px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    
 }
 
 .header-org {
     display: flex;
-    justify-content: space-between;
+    position: relative;
     align-items: center;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+    min-height: 60px;
+    
+
 }
 
+.menu-toggle img {
+    width: 20px;
+    height: auto;
+    
+         
+}
 
 .menu-toggle {
     background: none;
     border: none;
     cursor: pointer;
+    padding: 5px;
+            
+}
+
+.menu-toggle:hover {
+     transform: scale(1.2);
+         
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .logo img {
-    height: 60px;
+    height: 80px;
+    display:block;
+    
+        
+
 }
 
 .menu nav {
     display: flex;
     gap: 20px;
+    cursor: pointer;
+
 }
 
 .nav-icon {
-    width: 24px;
-    height: 24px;
-    filter: invert(1);
+    width: 26px;
+    height: 26px;
     transition: transform 0.3s;
+
 }
 
 .nav-icon:hover {
@@ -87,37 +117,38 @@ header {
 }
 
 
-/* =====================================================
-   3. HERO SECTION
-   ===================================================== */
+/* HERO SECTION */
 .hero {
-    
     width: 100%;
-    height: 100vh;
-    background-image: url('/src/assets/images/imagem\ de\ fundo.png');
+    height: 80vh;
+    background-image: url('../assets/images/imagem de fundo.png');
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
-
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.imagem-fundo {
-    position:absolute;
+.hero::before {
+    content: "";
+    position: absolute;
     inset: 0;
-    display: flex;
-    align-items: center;
+    background: rgba(0,0,0,0.3); 
+    z-index: 1;
 }
 
-.imagem-fundo img {
+.fundo-titulo {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.16);
+    padding: 40px;
     width: 100%;
-    object-fit: cover;
-    display: block;
-    filter: brightness(0.7);
-    align-items: center;
+    text-shadow:4px 4px 6px rgba(0, 0, 0, 0.9)
+    
 }
 
 .fundo-titulo h1 {
@@ -126,6 +157,16 @@ header {
     text-transform: uppercase;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    letter-spacing: 4px;
+
+}
+
+.fundo-titulo h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+
 }
 
 .fundo-titulo button {
@@ -135,22 +176,22 @@ header {
     padding: 12px 30px;
     font-family: var(--fonte-destaque);
     font-size: 1.2rem;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
+    box-shadow: 5px 5px 5px 1px rgba(0,0,0,0.7);
+
 }
 
 .fundo-titulo button:hover {
     background-color: #d67d26;
+    transform: scale(1.1);
+
 }
 
-
-/* =====================================================
-   4. COLEÇÃO WESTERN
-   ===================================================== */
 .colecao-western {
     background-color: var(--cor-fundo-header);
-    padding: 40px 20px;
+    padding: 80px 20px;
     text-align: center;
     border-top: 4px solid #8B4513;
     border-bottom: 4px solid #8B4513;
@@ -161,6 +202,9 @@ header {
     color: #D7CCC8;
     font-size: 2rem;
     margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+
 }
 
 .fotos-produtos {
@@ -168,13 +212,15 @@ header {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    border-radius: 10px;
 }
 
 .fotos-produtos img {
-    width: 200px;
+    width: 280px;
     border: 3px solid var(--cor-borda);
-    border-radius: 10px;
+    border-radius: 08px;
     transition: transform 0.3s, border-color 0.3s;
+    cursor: pointer;
 }
 
 .fotos-produtos img:hover {
@@ -183,12 +229,11 @@ header {
 }
 
 
-/* =====================================================
-   5. CATEGORIAS
-   ===================================================== */
+/*  CATEGORIAS */
 .categoria {
     padding: 50px 20px;
     text-align: center;
+    border-bottom: 4px solid #8B4513;
 }
 
 .titulo-categoria {
@@ -203,6 +248,8 @@ header {
     font-family: var(--fonte-destaque);
     font-size: 2.5rem;
     letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+
 }
 
 .separador-horizontal {
@@ -214,32 +261,44 @@ header {
 
 .produtos-categorias {
     display: grid;
+    height: 75vh;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.produtos-categorias img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 8px;
-    display: block;
-    margin: 0 auto;
+.item-categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
-.produtos-categorias span {
+.item-categoria img {
+    width: 300px;
+    max-width: 400px;
+    border-radius: 25px;
     display: block;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 3px solid var(--cor-borda); 
+    transition: transform 0.3s, border-color 0.3s; 
+    cursor: pointer; 
+}
+
+.item-categoria img:hover {
+    transform: translateY(-5px); 
+    border-color: var(--cor-destaque); 
+}
+
+.item-categoria span {
     font-family: var(--fonte-titulo);
     color: var(--cor-destaque);
     font-size: 1.2rem;
 }
 
 
-/* =====================================================
-   6. SOBRE NÓS
-   ===================================================== */
+/*  SOBRE */
 .sobre-nos {
     background-color: #3E2723;
     padding: 50px 20px;
@@ -247,6 +306,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .titulo-sobre-nos {
@@ -255,17 +315,30 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
+
 
 .titulo-sobre-nos h4 {
     font-family: var(--fonte-destaque);
     font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    letter-spacing: 2px;
+
+
+}
+
+.conteudo-sobre-nos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+    max-width: 1000px;
 }
 
 .historia-texto {
-    max-width: 800px;
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .historia-texto h5 {
@@ -273,6 +346,8 @@ header {
     color: var(--cor-destaque);
     font-size: 1.8rem;
     margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+
 }
 
 .historia-texto p {
@@ -281,60 +356,64 @@ header {
 }
 
 .imagem-artesao img {
-    width: 250px;
-    height: 250px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--cor-destaque);
+    border: 3px solid var(--cor-destaque);
+    box-shadow: 5px 5px 5px 1px rgba(0,0,0,0.7);
 }
 
-/* DESKTOP LADO A LADO */
 @media (min-width: 768px) {
-    .sobre-nos {
+    .conteudo-sobre-nos {
         flex-direction: row;
         justify-content: center;
-        gap: 40px;
+        align-items: center;
+        gap: 50px;
     }
     
     .historia-texto {
         text-align: left;
-        width: 50%;
+        flex: 1; 
     }
 
     .imagem-artesao {
-        width: 50%;
-        text-align: center;
+        flex: 1; 
+        display: flex;
+        justify-content:flex-end;
     }
 }
 
 
-/* =====================================================
-   7. FOOTER
-   ===================================================== */
+/* FOOTER */
 footer {
     background-color: #000;
     color: #FFF;
     padding-bottom: 20px;
     position: relative;
+    margin-top: 50px;
 }
 
 .divisor-horse {
     width: 100%;
-    margin-top: -50px;
+    margin-top: -60px;
     z-index: 10;
     position: relative;
+    pointer-events: none;
 }
 
 .divisor-horse img {
-    width: 100%;
-    display: block;
+    width: 80%;
+    display:block;
 }
 
 .final {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px 50px;
+    padding: 60px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .left {
@@ -357,7 +436,7 @@ footer {
     gap: 40px;
 }
 
-.contato h6 {
+.coluna-redes h6, .contato-social h6 {
     font-family: var(--fonte-destaque);
     color: var(--cor-destaque);
     font-size: 1.2rem;
@@ -367,6 +446,8 @@ footer {
 .redes-sociais nav {
     display: flex;
     gap: 10px;
+    cursor: pointer;
+
 }
 
 .right {
@@ -391,15 +472,22 @@ footer {
 }
 
 
-/* =====================================================
-   8. RESPONSIVIDADE
-   ===================================================== */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
     .final {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 30px;
+    }
+
+    .contato {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .separador-vertical {
+        display: none;
     }
 
     .produtos-categorias {
@@ -414,5 +502,9 @@ footer {
 
     .fundo-titulo h1 {
         font-size: 2rem;
+    }
+    
+    .header-org {
+        padding: 0;
     }
 }

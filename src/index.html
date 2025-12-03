@@ -1,154 +1,218 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pele Urbana</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+English+SC&family=IM+Fell+Great+Primer+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+English+SC&family=IM+Fell+Great+Primer+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-    <!--Header-->
+  <body>
     <header>
-        <section class="header-org">
-            <button class="menu-toggle" aria-controls="menu-categorias" aria-expanded="false" id="menu-btn">
-                <img src="./assets/icon/Menu.png" alt="Abrir Menu de Categorias">
-            </button>
+      <section class="header-org">
+        <button
+          class="menu-toggle"
+          aria-controls="menu-categorias"
+          aria-expanded="false"
+          id="menu-btn"
+        >
+          <img src="./assets/icon/icon-menu.svg" alt="Abrir Menu de Categorias" />
+        </button>
 
-            <div class="logo">
-                <img src="./assets/images/logo-marca.png" alt="Logo da marca">
-            </div>
-            <!--Nav Header-->
-            <div class="menu">
-                <nav>
-                    <a href="./login.html" class="nav-icon-link">
-                        <img src="./assets/icon/icone usuario.png" alt="icone-Usuário" class="nav-icon">
-                    </a>
-                    <a href="./pesquisa.html" class="nav-icon-link">
-                        <img src="./assets/icon/Lupa.png" alt="Parte-Pesquisa" class="nav-icon">
-                    </a>
-                    <a href="./carrinho.html" class="nav-icon-link">
-                        <img src="./assets/icon/Sacola icone.png" alt="produtos-loja" class="nav-icon">
-                    </a>
-                </nav>
-            </div>
-            <!--Hero - Call To Action-->
-        </section>
-    </header>
-    <main>
-        <div class="fundo-hero">
+        <div class="logo">
+          <img src="./assets/images/logo-marca.svg" alt="Logo da marca" />
         </div>
-        <section class="hero">
-            <div class="fundo-titulo">
-                <h1>Rustico Na Alma urbano no estilo</h1>
-                <button>CONHEÇA NOSSOS PRODUTOS</button>
-            </div>
-        </section>
+        <div class="menu">
+          <nav>
+            <img
+              src="./assets/icon/icon-user.svg"
+              alt="icone-Usuário"
+              class="nav-icon"
+            />
 
-        <section class="colecao-western">
-            <h2>COLEÇÃO WESTERN</h2>
+            <img
+              src="./assets/icon/icon-busca.svg"
+              alt="Parte-Pesquisa"
+              class="nav-icon"
+            />
 
-            <div class="fotos-proodutos">
-                <img src="./assets/images/bolsa-WESTERN.png" alt="Foto ilustrativa">
-                <img src="./assets/images/carteira-WESTERN.png" alt="Foto ilustrativa">
-                <img src="./assets/images/cinto-WESTERN.png" alt="Foto ilustrativa">
-                <img src="./assets/images/mochila-WESTERN.png" alt="Foto ilustrativa">
-            </div>
-        </section>
+            <img
+              src="./assets/icon/icon-sacola.svg"
+              alt="produtos-loja"
+              class="nav-icon"
+            />
+          </nav>
+        </div>
+      </section>
+    </header>
+ 
+    <main>
+      <section class="hero">
+        <div class="fundo-titulo">
+          <h1>Rústico na Alma,<br /></h1>
+          <h2>Urbano no Estilo.</h2>
+          <br/>
+          <button onclick="location.href='#nossos-produtos'">CONHEÇA NOSSOS PRODUTOS
+          </button>
+        </div>
+      </section>
 
-        <section class="categoria">
-            <div class="titulo-categoria">
-                <h3>CATEGORIA</h3>
-                <img src="./assets/icon/Logo mascote.png" alt="Imagem do mascote da loja">
-            </div>
+      <section class="colecao-western">
+        <h2>COLEÇÃO WESTERN</h2>
 
-            <div class="separador-horizontal"></div>
+        <div class="fotos-produtos">
+          <img src="./assets/images/bolsa-WESTERN.png" alt="Bolsa Western" />
+          <img
+            src="./assets/images/carteira-WESTERN.png"
+            alt="Carteira Western"
+          />
+          <img src="./assets/images/cinto-WESTERN.png" alt="Cinto Western" />
+          <img
+            src="./assets/images/mochila-WESTERN.png"
+            alt="Mochila Western"
+          />
+        </div>
+      </section>
 
-            <div class="produtos-categorias">
-                <img src="./assets/images/bolsa.png" alt="Imagem ilustrativa"><span>MOCHILAS</span>
-                <img src="./assets/images/cinto.png" alt="Imagem ilustrativa"><span>CINTOS</span>
-                <img src="./assets/images/sapato.png" alt="Imagem ilustrativa"><span>SAPATOS</span>
-                <img src="./assets/images/estojo.png" alt="Imagem ilustrativa"><span>ESTOJOS</span>
-                <img src="./assets/images/carteira.png" alt="Imagem ilustrativa"><span>CARTEIRAS</span>
-                <img src="./assets/images/jaqueta.png" alt="Imagem ilustrativa"><span>JAQUETAS</span>
-            </div>
-        </section>
+      <section class="categoria" id="nossos-produtos">
+        <div class="titulo-categoria">
+          <h3>Nossos Produtos</h3>
+          <img
+            src="./assets/icon/logo-mascote.svg"
+            alt="Imagem do mascote da loja"
+          />
+        </div>
 
-        <section class="sobre-nos">
-            <div class="titulo-sobre-nos">
-                <h4>SOBRE NÓS</h4>
-                <img src="./assets/icon/Logo mascote.png" alt="Imagem do mascote da loja">
-            </div>
+        <div class="separador-horizontal"></div>
 
-            <div class="separador-horizontal"></div>
+        <div class="produtos-categorias">
+          <div class="item-categoria">
+            <img src="./assets/images/bolsa.png" alt="Mochilas" />
+            <span>MOCHILAS</span>
+          </div>
+          <div class="item-categoria">
+            <img src="./assets/images/cinto.png" alt="Cintos" />
+            <span>CINTOS</span>
+          </div>
+          <div class="item-categoria">
+            <img src="./assets/images/sapato.png" alt="Sapatos" />
+            <span>SAPATOS</span>
+          </div>
+          <div class="item-categoria">
+            <img src="./assets/images/estojo.png" alt="Estojos" />
+            <span>ESTOJOS</span>
+          </div>
+          <div class="item-categoria">
+            <img src="./assets/images/carteira.png" alt="Carteiras" />
+            <span>CARTEIRAS</span>
+          </div>
+          <div class="item-categoria">
+            <img src="./assets/images/jaqueta.png" alt="Jaquetas" />
+            <span>JAQUETAS</span>
+          </div>
+        </div>
+      </section>
 
-            <div class="historia-texto">
-                <h5>História da loja</h5>
-                <p>Pele Urbana nasceu em 2007, quando o artesão André Meneses transformou seu pequeno ateliê em uma
-                    marca
-                    dedicada ao couro feito à mão. Desde o início, a proposta foi trabalhar apenas com couro bovino de
-                    origem reaproveitada, priorizando o uso consciente de materiais e práticas voltadas à
-                    ecossustentabilidade. Assim, cada peça combina estética urbana, durabilidade e um compromisso sutil
-                    com
-                    um processo mais responsável, sem abrir mão da autenticidade que define a marca.</p>
-            </div>
+      <section class="sobre-nos">
+        <div class="titulo-sobre-nos">
+          <h4>SOBRE NÓS</h4>
+          <img
+            src="./assets/icon/logo-mascote.svg"
+            alt="Imagem do mascote da loja"
+          />
+        </div>
 
-            <div class="imagem-artesao">
-                <img src="./assets/images/André Meneses.png" alt="Imagem ilustrativa">
-            </div>
-        </section>
+        <div class="separador-horizontal"></div>
+
+        <div class="conteudo-sobre-nos">
+          <div class="historia-texto">
+            <h5>História da loja</h5>
+            <p>
+              Pele Urbana nasceu em 2007, quando o artesão André Meneses
+              transformou seu pequeno ateliê em uma marca dedicada ao couro
+              feito à mão. Desde o início, a proposta foi trabalhar apenas com
+              couro bovino de origem reaproveitada, priorizando o uso consciente
+              de materiais e práticas voltadas à ecossustentabilidade. Assim,
+              cada peça combina estética urbana, durabilidade e um compromisso
+              sutil com um processo mais responsável, sem abrir mão da
+              autenticidade que define a marca.
+            </p>
+          </div>
+
+          <div class="imagem-artesao">
+            <img
+              src="./assets/images/artista-foto.png"
+              alt="O artesão André Meneses"
+            />
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <section class="final">
-            <div class="divisor-horse">
-                <img src="./assets/images/divisor-section-horse.png" alt="Imagem ilustrativa">
-            </div>
-            <section class="left">
-                <div class="logo-inferior">
-                    <img src="./assets/images/logo-marca.png" alt="Logo da marca">
-                </div>
+      <section class="final">
+        <div class="divisor-horse">
+          <img
+            src="./assets/images/divisor-section-horse.png"
+            alt="Divisor decorativo"
+          />
+        </div>
+        <section class="left">
+          <div class="logo-inferior">
+            <img src="./assets/images/logo-marca.svg" alt="Logo da marca" />
+          </div>
 
-                <div class="direitos-reservados">
-                    <p>© 2025 PELE URBANA CO. Todos os direitos reservados.</p>
-                </div>
-            </section>
-            <div class="contato">
-                <h6>REDES SOCIAIS</h6>
-                <div class="redes-sociais">
-                    <nav>
-                        <a href="./login.html" class="nav-icon-link">
-                            <img src="./assets/icon/Ìcone Instagram.png" alt="icone-instagram" class="nav-icon">
-                        </a>
-                        <a href="./pesquisa.html" class="nav-icon-link">
-                            <img src="./assets/icon/Ìcone Whatsapp.png" alt="icone-whatsaap" class="nav-icon">
-                        </a>
-                        <a href="./carrinho.html" class="nav-icon-link">
-                            <img src="./assets/icon/icone Tiktok.png" alt="icone-tiktok" class="nav-icon">
-                        </a>
-                    </nav>
-                </div>
-                <section class="right">
-                    <div class="separador-vertical"></div>
-
-                    <div class="contato-social">
-                        <h6>SOBRE NÓS</h6>
-                        <p>fale conosco</p>
-                        <p>envios e devoluções</p>
-                        <p>termo de uso</p>
-                        <p>privacidade</p>
-                        <p>trocas e devoluções</p>
-                    </div>
-                </section>
+          <div class="direitos-reservados">
+            <p>© 2025 PELE URBANA CO. Todos os direitos reservados.</p>
+          </div>
         </section>
-    </footer>
-</body>
+        <div class="contato">
+          <div class="coluna-redes">
+            <h6>REDES SOCIAIS</h6>
+            <div class="redes-sociais">
+              <nav>
+                <img
+                  src="./assets/icon/icon-instagram.svg"
+                  alt="icone-instagram"
+                  class="nav-icon"
+                />
 
+                <img
+                  src="./assets/icon/icon-whatsapp.svg"
+                  alt="icone-whatsaap"
+                  class="nav-icon"
+                />
+
+                <img
+                  src="./assets/icon/icon-tiktok.svg"
+                  alt="icone-tiktok"
+                  class="nav-icon"
+                />
+              </nav>
+            </div>
+          </div>
+
+          <section class="right">
+            <div class="separador-vertical"></div>
+
+            <div class="contato-social">
+              <h6>SOBRE NÓS</h6>
+              <p>fale conosco</p>
+              <p>envios e devoluções</p>
+              <p>termo de uso</p>
+              <p>privacidade</p>
+              <p>trocas e devoluções</p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </footer>
+  </body>
 </html>
